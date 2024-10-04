@@ -2,7 +2,7 @@ import { useState } from 'react';
 import React from 'react';
 import SearchBar from './components/SeacrhBar';
 import searchImages from './api';
-import Image
+import ImageList from './components/ImageList';
 
 
 function App() {
