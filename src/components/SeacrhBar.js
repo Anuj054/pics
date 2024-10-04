@@ -1,6 +1,26 @@
-function SearchBar(){
+import React from 'react';
+import { useState } from 'react';
+
+const SeacrhBar = ({onSubmit}) => {
+    const [term,setTerm]=useState('');
+  const handleFormSubmit=(event)=>{
+    event.preventDefault();
+onSubmit(term)
+  };
+  const handleChange=(event)=>{
+    setTerm(event.target.value)
+
+  };
+  
+  return (
+
     <div>
-        SearchBar
+   <form onSubmit={handleFormSubmit}>
+   <input value={term} onChange={handleChange}/>
+   </form>
+        
     </div>
+  )
 }
-export default SearchBar;
+
+export default SeacrhBar
